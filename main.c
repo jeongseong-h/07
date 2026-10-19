@@ -1,21 +1,17 @@
 #include <stdio.h>
 
-int inc(int counter);  // 함수 원형 선언
+void f(void);
 
 int main(void)
 {
-    int i = 10;
-    printf("함수 호출 전 i=%d\n", i);
-
-    i = inc(i);
-
-    printf("함수 호출 후 i=%d\n", i);
-
-    return 0;
+    int i;
+    for (i=0; i<5; i++)
+        f();
 }
 
-int inc(int counter)
+void f(void)
 {
-    counter++;
-    return counter;
+    int i;
+    for (i=0; i<10; i++)
+    printf("#");
 }
